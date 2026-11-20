@@ -1,5 +1,16 @@
 name = "meadowridgey"
+main = "worker.js"
 compatibility_date = "2025-04-01"
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
+run_worker_first = ["/api/classroom/*"]
+
+[[durable_objects.bindings]]
+name = "CLASSROOMS"
+class_name = "ClassroomRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ClassroomRoom"]
