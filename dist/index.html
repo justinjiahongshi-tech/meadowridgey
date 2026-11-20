@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,22 +22,12 @@
 </head>
 <body>
   <div class="shell">
-    <header class="nav"><a class="brand" href="#top"><span class="brand-icon" aria-hidden="true">✳</span>meadowridgey</a><nav class="nav-right" aria-label="Main navigation"><a class="nav-link" href="#ideas" data-zh="创意乐园" data-en="Our ideas">创意乐园</a><button class="lang" type="button" id="language" aria-label="Switch to English">EN / 中文</button></nav></header>
+    <header class="nav"><a class="brand" href="#top"><span class="brand-icon" aria-hidden="true">✳</span>meadowridgey</a><nav class="nav-right" aria-label="Main navigation"><a class="nav-link" href="#ideas">Our ideas</a></nav></header>
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title"><div class="reference-visual"><img src="welcome.jpg" alt="阳光下，背着书包的小朋友和小猫在草地上开心地玩耍" data-zh-alt="阳光下，背着书包的小朋友和小猫在草地上开心地玩耍" data-en-alt="A happy child with a backpack and a cat enjoying a sunny meadow"></div><div class="hero-copy"><div class="eyebrow"><span></span> MADE OF IMAGINATION</div><h1 id="hero-title" data-zh-html="好点子，<em>一起玩。</em>" data-en-html="Big ideas. <em>Let's play.</em>">好点子，<em>一起玩。</em></h1><p data-zh="这里是 meadowridgey 的创意乐园。把我们想到的点子，慢慢变成可以一起玩的游戏。" data-en="Welcome to meadowridgey, a little playground for our ideas. Together, we can turn them into games to play.">这里是 meadowridgey 的创意乐园。把我们想到的点子，慢慢变成可以一起玩的游戏。</p><a class="cta" href="#ideas" data-zh="看看创意乐园" data-en="Explore our ideas">看看创意乐园</a></div></section>
-      <section class="section" id="ideas"><div class="section-head"><div><div class="section-tag">THE IDEA PLAYGROUND</div><h2 data-zh="创意乐园" data-en="The idea playground">创意乐园</h2></div><p class="section-note" data-zh="同学们的奇思妙想，以后会从这里变成好玩的东西。" data-en="A place where our classmates' ideas can become something fun.">同学们的奇思妙想，以后会从这里变成好玩的东西。</p></div><div class="empty"><div class="empty-art" aria-hidden="true">✏️</div><div class="empty-content"><h3 data-zh="第一个点子，即将登场" data-en="The first idea is on its way">第一个点子，即将登场</h3><p data-zh="创意正在收集中。等我们把第一个想法做成游戏，就能在这里玩到啦！" data-en="We're gathering ideas. When the first one becomes a game, you'll be able to play it here!">创意正在收集中。等我们把第一个想法做成游戏，就能在这里玩到啦！</p></div><span class="empty-tag" data-zh="敬请期待 ✦" data-en="Coming soon ✦">敬请期待 ✦</span></div></section>
-      <section class="note"><div><h2 data-zh="每个点子都值得被听见。" data-en="Every idea deserves a moment.">每个点子都值得被听见。</h2><p data-zh="天马行空也好，简单有趣也好，创意都可以从一页记事本开始。" data-en="Wild or wonderfully simple, a great idea can start on a page in a notebook.">天马行空也好，简单有趣也好，创意都可以从一页记事本开始。</p></div><div class="note-icon" aria-hidden="true">📓</div></section>
-    </main><footer class="footer"><strong>meadowridgey ✳</strong><span data-zh="一点想象力，很多可能性。" data-en="A little imagination, a lot of possibility.">一点想象力，很多可能性。</span><span>MADE FOR MAKING & PLAYING</span></footer>
+      <section class="hero" aria-labelledby="hero-title"><div class="reference-visual"><img src="welcome.jpg" alt="A happy child with a backpack and a cat enjoying a sunny meadow"></div><div class="hero-copy"><div class="eyebrow"><span></span> MADE OF IMAGINATION</div><h1 id="hero-title">Big ideas. <em>Let's play.</em></h1><p>Welcome to meadowridgey, a little playground for our ideas. Together, we can turn them into games to play.</p><a class="cta" href="#ideas">Explore our ideas</a></div></section>
+      <section class="section" id="ideas"><div class="section-head"><div><div class="section-tag">THE IDEA PLAYGROUND</div><h2>The idea playground</h2></div><p class="section-note">A place where our classmates' ideas can become something fun.</p></div><div class="empty"><div class="empty-art" aria-hidden="true">✏️</div><div class="empty-content"><h3>The first idea is on its way</h3><p>We're gathering ideas. When the first one becomes a game, you'll be able to play it here!</p></div><span class="empty-tag">Coming soon ✦</span></div></section>
+      <section class="note"><div><h2>Every idea deserves a moment.</h2><p>Wild or wonderfully simple, a great idea can start on a page in a notebook.</p></div><div class="note-icon" aria-hidden="true">📓</div></section>
+    </main><footer class="footer"><strong>meadowridgey ✳</strong><span>A little imagination, a lot of possibility.</span><span>MADE FOR MAKING & PLAYING</span></footer>
   </div>
-  <script>
-    (() => { const button = document.querySelector('#language'); let language = 'zh';
-      button.addEventListener('click', () => { language = language === 'zh' ? 'en' : 'zh'; document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-        document.querySelectorAll('[data-zh]').forEach(el => { el.textContent = el.dataset[language]; });
-        document.querySelectorAll('[data-zh-html]').forEach(el => { el.innerHTML = el.dataset[language + 'Html']; });
-        document.querySelectorAll('[data-zh-alt]').forEach(el => { el.alt = el.dataset[language + 'Alt']; });
-        button.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
-      });
-    })();
-  </script>
 </body>
 </html>
