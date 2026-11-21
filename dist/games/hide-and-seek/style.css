@@ -5,3 +5,6 @@
 .view-controls{display:flex;gap:5px;touch-action:none}.view-controls button{width:44px;height:40px;border:1px solid #c8e6d7;background:#fff;color:#487665;border-radius:12px;box-shadow:0 3px 0 #c0dfcf;touch-action:none;user-select:none;-webkit-user-select:none;font-weight:800}.view-controls button:active,.view-controls button.pressed{background:#dbf6e7;transform:translateY(2px);box-shadow:0 1px 0 #c0dfcf}@media(max-width:600px){.controls{flex-wrap:wrap}.view-controls button{width:36px;height:35px}.controls p{width:100%;margin:0;text-align:center}}
 
 .role-flash{position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);padding:12px 20px;border-radius:14px;background:#fff;color:#285749;box-shadow:0 5px 25px #153e3555;font-weight:900;text-align:center;pointer-events:none}.role-flash[hidden]{display:none}
+
+/* Brighter, rounded comic-inspired accents. */
+html,body{background:#f4f5ff;color:#38425b}.stage{box-shadow:0 12px 35px #8076ae2b}.panel{border:3px solid #f5d9e5}.primary{background:#927ac2}.room,.lobby{background:#f4efff}.room button{background:#e7ddfa;color:#655184}.chip{border:2px solid #fff1f7}.movement button,.view-controls button{border-color:#e1d9ef;color:#75618f;box-shadow:0 3px 0 #d7cce9}.room-toggle{background:#eee6fb;color:#6a5982}
