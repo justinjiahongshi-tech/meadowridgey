@@ -5,3 +5,6 @@
 @media(max-width:600px){.game-stage.is-intro{min-height:560px;min-height:min(560px,calc(100dvh - 70px));aspect-ratio:auto}}
 
 .room-badge{position:absolute;top:15px;right:15px;display:flex;align-items:center;gap:7px;background:#ffffffef;border-radius:13px;padding:7px 9px;font-size:12px;font-weight:800;color:#526a8c;box-shadow:0 4px 15px #223d561b}.room-badge[hidden]{display:none}.room-badge button{border:0;background:#e8eefb;border-radius:8px;color:#526a8c;padding:5px 8px;font-size:11px;font-weight:700}@media(max-width:600px){.room-badge{top:7px;right:7px;font-size:10px;gap:4px;padding:5px}.room-badge button{font-size:10px;padding:4px}}
+
+/* Rounded, soft cartoon accents shared with the other games. */
+html,body{background:#f4f5ff;color:#38425b}.stage,.game-stage{box-shadow:0 12px 35px #8076ae2b}.message-card{border:3px solid #f5d9e5}.primary{background:#927ac2}.hud-card{border:2px solid #fff1f7}.controls button{border-color:#e1d9ef;color:#75618f;box-shadow:0 3px 0 #d7cce9}.room{background:#f4efff}.room button{background:#e7ddfa;color:#655184}
