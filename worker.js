@@ -1,3 +1,4 @@
+export { HideSeekRoom } from './hide-seek-room.js';
 export { BeanArena } from './bean-arena.js';
 const desks=[];
 for(const x of [-12,-6,0,6,12])for(const z of [-9,-3,3,9])desks.push({x,z});
@@ -14,4 +15,4 @@ export class ClassroomRoom {
  tick(){const now=Date.now(),dt=Math.min((now-this.last)/1000,.25);this.last=now;const t=this.teacher;t.stun=Math.max(0,t.stun-dt);const active=[...this.players.values()].filter(p=>p.active);if(active.length&&t.stun<=0){const target=active.reduce((a,b)=>Math.hypot(a.x-t.x,a.z-t.z)<Math.hypot(b.x-t.x,b.z-t.z)?a:b);this.pathTime-=dt;if(this.pathTime<=0){this.waypoint=pathStep(t,target);this.pathTime=.4}const dest=this.waypoint||target,dx=dest.x-t.x,dz=dest.z-t.z,len=Math.hypot(dx,dz);if(len>.05){const dist=Math.min(len,2.35*dt),nx=t.x+dx/len*dist,nz=t.z+dz/len*dist;if(free(nx,nz)){t.x=nx;t.z=nz}else this.pathTime=0}}
  this.broadcast({type:'snapshot',teacher:t,players:[...this.players].map(([id,p])=>({id,x:p.x,y:p.y,z:p.z,yaw:p.yaw,active:p.active}))})}
 }
-export default {async fetch(request,env){const url=new URL(request.url);const bean=url.pathname.match(/^\/api\/bean\/([A-Z0-9]{4,8})$/);if(bean){const id=env.BEAN_ARENAS.idFromName(bean[1]);return env.BEAN_ARENAS.get(id).fetch(request)}const match=url.pathname.match(/^\/api\/classroom\/([A-Z0-9]{4,8})$/);if(match){const id=env.CLASSROOMS.idFromName(match[1]);return env.CLASSROOMS.get(id).fetch(request)}return env.ASSETS.fetch(request)}};
+export default {async fetch(request,env){const url=new URL(request.url);const hide=url.pathname.match(/^\/api\/hide\/([A-Z0-9]{4,8})$/);if(hide){const id=env.HIDE_ROOMS.idFromName(hide[1]);return env.HIDE_ROOMS.get(id).fetch(request)}const bean=url.pathname.match(/^\/api\/bean\/([A-Z0-9]{4,8})$/);if(bean){const id=env.BEAN_ARENAS.idFromName(bean[1]);return env.BEAN_ARENAS.get(id).fetch(request)}const match=url.pathname.match(/^\/api\/classroom\/([A-Z0-9]{4,8})$/);if(match){const id=env.CLASSROOMS.idFromName(match[1]);return env.CLASSROOMS.get(id).fetch(request)}return env.ASSETS.fetch(request)}};
