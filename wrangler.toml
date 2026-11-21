@@ -5,7 +5,7 @@ compatibility_date = "2025-04-01"
 [assets]
 directory = "./dist"
 binding = "ASSETS"
-run_worker_first = ["/api/classroom/*"]
+run_worker_first = ["/api/classroom/*", "/api/bean/*"]
 
 [[durable_objects.bindings]]
 name = "CLASSROOMS"
@@ -14,3 +14,11 @@ class_name = "ClassroomRoom"
 [[migrations]]
 tag = "v1"
 new_sqlite_classes = ["ClassroomRoom"]
+
+[[durable_objects.bindings]]
+name = "BEAN_ARENAS"
+class_name = "BeanArena"
+
+[[migrations]]
+tag = "v2"
+new_sqlite_classes = ["BeanArena"]
