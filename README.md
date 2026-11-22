@@ -11,3 +11,5 @@ Bean Rails is a 2D co-op train-survival game for up to eight players. `/api/bean
 Hide & Seek World is a first-person 3D game for 2–30 players. Create a room and share its code, or join with the same code; each round randomly selects one seeker, gives hiders a 30-second head start, and runs a five-minute chase where touching a hider swaps roles. `/api/hide/` uses the `HIDE_ROOMS` Durable Object. Room codes stay visible while connected and can be hidden or shown with the button in each multiplayer game.
 
 Space Crew is a 2D social-deduction game for 3–10 players. Each room uses `SPACE_ROOMS`; the server privately assigns one impostor, tracks tasks and nearby actions, and runs meetings and votes. Players discuss outside the game.
+
+Evolution Island is a shared 2D evolution game for up to eight players. Create a room in Friendly mode (no player damage) or Normal mode (players may attack), then share the room code. Eat food to progress through 50 creature stages to T. rex. The `/api/evolution/` WebSocket uses the `EVOLUTION_ROOMS` Durable Object. Move with WASD, arrow keys or touch controls; hold Space/F or the attack button to attack in Normal mode.
