@@ -12,3 +12,5 @@ main.is-fullscreen header{flex:none;padding-bottom:6px}
 @media(max-width:600px){.fullscreen{font-size:11px;padding:7px}main.is-fullscreen header{gap:5px}main.is-fullscreen header strong{font-size:10px;letter-spacing:0}main.is-fullscreen .controls p{font-size:11px}}
 
 .dpad,.dpad button{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:none}
+
+.ice{flex:none;min-width:115px;min-height:64px;background:#89d6ef;color:#16577a;box-shadow:0 4px #65b7d4}.ice span,.ice small{display:block}.ice small{font-size:11px;margin-top:4px}.ice:disabled{background:#dbe9eb;color:#849a9f;box-shadow:none}@media(max-width:600px){.ice{min-width:90px;min-height:54px;padding:6px;font-size:12px}.controls{gap:6px}.controls p{font-size:11px}}
