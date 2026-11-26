@@ -27,3 +27,5 @@ Team Battle is a first-person multiplayer arena for 2–10 players. Rooms random
 Team Battle also offers solo practice against a computer-controlled opponent. Choose Play solo, or use Play solo in a one-player lobby. Solo rounds use the same scoring, cover, respawn and victory rules as multiplayer.
 
 Team Battle uses visible projectiles that travel through the arena; buildings stop them and scoring happens when they reach an opposing player.
+
+The winter update adds snow and cold-weather scenery across all six games. Team Battle sends short-lived impact effects so bullets visibly reach walls or targets before disappearing.

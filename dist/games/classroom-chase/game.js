@@ -7,6 +7,8 @@ const toonRamp=new THREE.DataTexture(new Uint8Array([95,155,210,255]),4,1,THREE.
 function box(w,h,d,m,x,y,z,parent=scene){const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;parent.add(o);return o}function sphere(r,m,x,y,z,parent){const o=new THREE.Mesh(new THREE.SphereGeometry(r,16,12),m);o.position.set(x,y,z);o.castShadow=true;parent.add(o);return o}
 box(34,.3,30,mats.floor,0,-.15,0);box(34,5,.35,mats.wall,0,2.5,-15);box(.35,5,30,mats.wall,-17,2.5,0);box(.35,5,30,mats.wall,17,2.5,0);box(8,2.6,.12,mats.green,0,2.9,-14.78);box(8.4,.12,.25,mats.wood,0,1.55,-14.7);
 for(let x of [-11,11]){box(3,2.6,.12,mat('#8fc7ef'),x,3,-14.76);box(.1,2.6,.14,mats.wall,x,3,-14.66);box(3,.1,.14,mats.wall,x,3,-14.66)}
+// Paper snowflakes decorate the classroom without changing collisions.
+for(const x of [-14,-7,0,7,14]){const flake=new THREE.Group();box(1.1,.09,.06,mats.white,0,0,0,flake);box(.09,1.1,.06,mats.white,0,0,0,flake);const a=box(.09,1.05,.06,mats.white,0,0,0,flake);a.rotation.z=Math.PI/4;const b=box(.09,1.05,.06,mats.white,0,0,0,flake);b.rotation.z=-Math.PI/4;flake.position.set(x,4.25,-14.48);scene.add(flake)}
 const desks=[];
 for(const x of [-12,-6,0,6,12])for(const z of [-9,-3,3,9]){desks.push({x,z});box(2,.18,1.25,mats.wood,x,1,z);for(const dx of [-.8,.8])for(const dz of [-.45,.45])box(.1,1,.1,mats.dark,x+dx,.5,z+dz)}
 function free(x,z){return Math.abs(x)<16.2&&Math.abs(z)<14.2&&!desks.some(d=>Math.abs(x-d.x)<1.4&&Math.abs(z-d.z)<1.03)}

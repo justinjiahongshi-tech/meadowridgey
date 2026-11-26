@@ -1,0 +1,7 @@
+/* Shared winter decorations keep game controls and text unobstructed. */
+html,body{background:linear-gradient(150deg,#eef8ff,#e9efff 55%,#e4f6fb);color:#304c68}
+.winter-label{display:inline-block;margin:3px 0 5px;padding:4px 10px;border-radius:999px;background:#e8f6ff;color:#41789d;font-size:11px;font-weight:900;letter-spacing:.1em}
+.winter-snow{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2;opacity:.78}
+.winter-flake{position:absolute;top:-12%;left:var(--x);width:var(--size);height:var(--size);border-radius:50%;background:#fff;box-shadow:0 0 5px #a5d7ee;animation:snowfall var(--duration) linear var(--delay) infinite}
+@keyframes snowfall{from{transform:translate3d(0,-2vh,0)}to{transform:translate3d(var(--drift),115vh,0)}}
+@media(prefers-reduced-motion:reduce){.winter-flake{animation:none;opacity:.5}.winter-flake:nth-child(n+9){display:none}.winter-flake{top:var(--x)}}
