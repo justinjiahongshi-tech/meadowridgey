@@ -25,3 +25,5 @@ Each Hide & Seek World player receives a held totem at the start of each round. 
 Team Battle is a first-person multiplayer arena for 2–10 players. Rooms randomly assign even red and blue teams, with one spectator when the number is odd; late joiners spectate until the next round. The first team to score 20 wins. Players respawn after three seconds, and buildings block movement and shots. Use WASD and drag to look, hold Space or Shoot, or use touch controls. `/api/battle/` uses the BATTLE_ROOMS Durable Object.
 
 Team Battle also offers solo practice against a computer-controlled opponent. Choose Play solo, or use Play solo in a one-player lobby. Solo rounds use the same scoring, cover, respawn and victory rules as multiplayer.
+
+Team Battle uses visible projectiles that travel through the arena; buildings stop them and scoring happens when they reach an opposing player.
