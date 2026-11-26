@@ -17,3 +17,7 @@ Evolution Island is a shared 2D evolution game for up to eight players. Create a
 In Normal mode, human players can use Ice Ice Ice (button or Space) to eliminate nearby creatures of any size. The cooldown is three minutes; protected and respawning players are safe. The skill is unavailable in Friendly mode.
 
 Hide & Seek World houses have open doorways and interiors. Players can use the Climb button or C near a tree to climb and descend, and use Hide or H in the central pond or bushes to hide or come out. Hidden players are visible and taggable to seekers who enter the same hiding place; height is also checked for tree tags.
+
+Hide & Seek World players can jump with the Jump button or Space. Jump height is synchronized by the room server so other players see it and tags account for vertical distance.
+
+Each Hide & Seek World player receives a held totem at the start of each round. A hider’s first tag breaks it and grants a brief escape; later tags swap roles. The totem resets next round.
