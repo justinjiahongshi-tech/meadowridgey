@@ -8,3 +8,5 @@
 
 /* Brighter, rounded comic-inspired accents. */
 html,body{background:#f4f5ff;color:#38425b}.stage{box-shadow:0 12px 35px #8076ae2b}.panel{border:3px solid #f5d9e5}.primary{background:#927ac2}.room,.lobby{background:#f4efff}.room button{background:#e7ddfa;color:#655184}.chip{border:2px solid #fff1f7}.movement button,.view-controls button{border-color:#e1d9ef;color:#75618f;box-shadow:0 3px 0 #d7cce9}.room-toggle{background:#eee6fb;color:#6a5982}
+
+.actions{display:flex;gap:6px}.actions button{border:1px solid #dacff0;background:#fff;border-radius:12px;padding:10px;color:#655184;font-weight:800;white-space:nowrap;touch-action:manipulation}.hide-status{position:absolute;top:82px;left:50%;transform:translateX(-50%);padding:8px 12px;border-radius:12px;background:#e3f9ffed;color:#346575;font-size:13px;font-weight:800;text-align:center;pointer-events:none}.hide-status[hidden]{display:none}@media(max-width:600px){.actions button{padding:8px;font-size:12px}.hide-status{top:60px;font-size:11px;width:max-content;max-width:90%}}
