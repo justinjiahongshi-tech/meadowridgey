@@ -21,3 +21,5 @@ Hide & Seek World houses have open doorways and interiors. Players can use the C
 Hide & Seek World players can jump with the Jump button or Space. Jump height is synchronized by the room server so other players see it and tags account for vertical distance.
 
 Each Hide & Seek World player receives a held totem at the start of each round. A hider’s first tag breaks it and grants a brief escape; later tags swap roles. The totem resets next round.
+
+Team Battle is a first-person multiplayer arena for 2–10 players. Rooms randomly assign even red and blue teams, with one spectator when the number is odd; late joiners spectate until the next round. The first team to score 20 wins. Players respawn after three seconds, and buildings block movement and shots. Use WASD and drag to look, hold Space or Shoot, or use touch controls. `/api/battle/` uses the BATTLE_ROOMS Durable Object.
