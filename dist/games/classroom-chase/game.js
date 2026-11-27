@@ -1,6 +1,7 @@
 import * as THREE from './three.module.min.js';
 import {bindJoystick} from './joystick.js?v=1';
 import {bindViewDrag} from './view-drag.js?v=1';
+import {bindInstantAction} from '../shared/touch-controls.js?v=1';
 const canvas=document.querySelector('#game'),stage=document.querySelector('#stage'),scoreEl=document.querySelector('#score'),statusEl=document.querySelector('#status'),hint=document.querySelector('#hint'),overlay=document.querySelector('#message'),title=document.querySelector('#message-title'),message=document.querySelector('#message-text'),start=document.querySelector('#start');
 const scene=new THREE.Scene();scene.background=new THREE.Color('#d9eff9');scene.fog=new THREE.Fog('#d9eff9',23,48);
 const camera=new THREE.PerspectiveCamera(68,16/9,.1,120);const renderer=new THREE.WebGLRenderer({canvas,antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.outputColorSpace=THREE.SRGBColorSpace;
@@ -60,6 +61,6 @@ const mapping={arrowup:'up',w:'up',arrowdown:'down',s:'down',arrowleft:'left',a:
 for(const b of document.querySelectorAll('[data-move], [data-turn], [data-look]')){const key=b.dataset.move||(b.dataset.turn==='left'?'turnLeft':b.dataset.turn==='right'?'turnRight':b.dataset.look==='up'?'lookUp':'lookDown');const release=e=>{keys[key]=false;b.classList.remove('pressed');if(e&&b.hasPointerCapture(e.pointerId))b.releasePointerCapture(e.pointerId)};b.addEventListener('pointerdown',e=>{e.preventDefault();b.setPointerCapture(e.pointerId);keys[key]=true;b.classList.add('pressed')});b.addEventListener('pointerup',release);b.addEventListener('pointercancel',release);b.addEventListener('lostpointercapture',()=>release())}
 
 const controlMode=document.querySelector('#control-mode');controlMode.addEventListener('click',()=>{stopJoystick();keys={};const buttons=controlMode.parentElement.classList.toggle('button-mode');controlMode.textContent=buttons?'Use joystick':'Use buttons';controlMode.setAttribute('aria-pressed',String(buttons))});
-document.querySelector('#jump').addEventListener('click',jump);for(const b of document.querySelectorAll('[data-action]'))b.addEventListener('click',()=>trick(b.dataset.action));
+bindInstantAction(document.querySelector('#jump'),jump);for(const b of document.querySelectorAll('[data-action]'))b.addEventListener('click',()=>trick(b.dataset.action));
 start.addEventListener('click',reset);document.querySelector('#restart').addEventListener('click',reset);
 player.position.set(room.connected?(Math.random()*6-3):0,0,12);if(!room.connected)teacher.position.set(0,0,-12);camera.position.set(0,14,19);requestAnimationFrame(frame);
