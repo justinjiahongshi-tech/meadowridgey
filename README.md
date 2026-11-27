@@ -29,3 +29,5 @@ Team Battle also offers solo practice against a computer-controlled opponent. Ch
 Team Battle uses visible projectiles that travel through the arena; buildings stop them and scoring happens when they reach an opposing player.
 
 The winter update adds snow and cold-weather scenery across all six games. Team Battle sends short-lived impact effects so bullets visibly reach walls or targets before disappearing.
+
+Classroom Chase touch controls include a drag joystick for movement and dragging the scene to look around; jump and tricks remain separate buttons. Keyboard movement and view controls remain available.
