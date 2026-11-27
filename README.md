@@ -31,3 +31,5 @@ Team Battle uses visible projectiles that travel through the arena; buildings st
 The winter update adds snow and cold-weather scenery across all six games. Team Battle sends short-lived impact effects so bullets visibly reach walls or targets before disappearing.
 
 Classroom Chase touch controls include a drag joystick for movement and dragging the scene to look around; jump and tricks remain separate buttons. Keyboard movement and view controls remain available.
+
+All six games use a touch joystick on iPads and phones. Players can choose “Use buttons” for the original directional controls; the first-person games also allow dragging the view. Jumping and movement use independent touches in Classroom Chase and Hide & Seek World.
