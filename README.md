@@ -33,3 +33,5 @@ The winter update adds snow and cold-weather scenery across all six games. Team 
 Classroom Chase touch controls include a drag joystick for movement and dragging the scene to look around; jump and tricks remain separate buttons. Keyboard movement and view controls remain available.
 
 All six games use a touch joystick on iPads and phones. Players can choose “Use buttons” for the original directional controls; the first-person games also allow dragging the view. Jumping and movement use independent touches in Classroom Chase and Hide & Seek World.
+
+Hide & Seek World has a Play solo option with three computer players. You begin as a hider; the same totem and role-switch rules apply. If friends join during a solo round they spectate until the next round.
