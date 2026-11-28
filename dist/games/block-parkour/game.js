@@ -1,5 +1,5 @@
 import * as THREE from '../classroom-chase/three.module.min.js';
-import {createGame,step,jump,reset,respawn} from './engine.js';
+import {createGame,step,jump,reset,respawn} from './engine.js?v=2';
 import {setupTouchControls,bindInstantAction} from '../shared/touch-controls.js?v=1';
 import {bindViewDrag} from '../classroom-chase/view-drag.js?v=1';
 import {installMouseLook} from '../shared/mouse-look.js?v=1';
