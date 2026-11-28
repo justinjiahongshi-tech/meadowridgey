@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {installMouseLook} from '../dist/games/shared/mouse-look.js';
+const doc={pointerLockElement:null,handlers:{},addEventListener(t,f){this.handlers[t]=f},exitPointerLock(){this.pointerLockElement=null}};
+const canvas={handlers:{},addEventListener(t,f){this.handlers[t]=f},requestPointerLock(){doc.pointerLockElement=this}};
+let playing=true,moves=[];const release=installMouseLook(canvas,()=>playing,(x,y)=>moves.push([x,y]),doc);
+canvas.handlers.pointerdown({pointerType:'touch',button:0});assert.equal(doc.pointerLockElement,null,'touch does not capture the mouse');
+canvas.handlers.pointerdown({pointerType:'mouse',button:0});assert.equal(doc.pointerLockElement,canvas,'mouse click captures pointer');
+doc.handlers.mousemove({movementX:12,movementY:-5});assert.deepEqual(moves,[[12,-5]],'mouse movement turns without holding a button');
+playing=false;doc.handlers.mousemove({movementX:9,movementY:9});assert.equal(moves.length,1,'no look when game is stopped');release();assert.equal(doc.pointerLockElement,null,'pointer is released');
+console.log('Parkour mouse look and touch input separation verified');
